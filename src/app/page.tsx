@@ -8,7 +8,6 @@ export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [review1, setReview1] = useState(true);
   const [review2, setReview2] = useState(false);
-  const [review3, setReview3] = useState(false);
   const [isFixed, setIsFixed] = useState(false);
   const [activeSection, setActiveSection] = useState("");
   const handleDownload = () => {
@@ -66,37 +65,38 @@ export default function Home() {
           className={`${isFixed ? "fixed" : "absolute"} lg:hidden flex-col py-24 gap-10 pl-10 pubSans ${menuOpen ? "flex" : "hidden"} top-[72px] left-0 right-0 bg-bgblack text-3xl z-50`}
         >
           <a
-            className="block"
             href="#intro"
-            className={`${activeSection === "intro" ? "text-white" : "text-greishh"} transition-colors duration-200`}
+            className={`${activeSection === "intro" ? "text-white" : "text-greishh"} block transition-colors duration-200`}
           >
             Intro
           </a>
           <a
-            className="block"
             href="#about"
-            className={`${activeSection === "about" ? "text-white" : "text-greishh"} transition-colors duration-200`}
+            className={`${activeSection === "about" ? "text-white" : "text-greishh"} block transition-colors duration-200`}
           >
             About
           </a>
           <a
-            className="block"
             href="#skills"
-            className={`${activeSection === "skills" ? "text-white" : "text-greishh"} transition-colors duration-200`}
+            className={`${activeSection === "skills" ? "text-white" : "text-greishh"} block transition-colors duration-200`}
           >
             Skills
           </a>
           <a
-            className="block"
             href="#works"
-            className={`${activeSection === "works" ? "text-white" : "text-greishh"} transition-colors duration-200`}
+            className={`${activeSection === "works" ? "text-white" : "text-greishh"} block transition-colors duration-200`}
           >
             Works
           </a>
           <a
-            className="block"
+            href="#reveiws"
+            className={`${activeSection === "reveiws" ? "text-white" : "text-greishh"} block transition-colors duration-200`}
+          >
+            Reveiws
+          </a>
+          <a
             href="#contact"
-            className={`${activeSection === "contact" ? "text-white" : "text-greishh"} transition-colors duration-200`}
+            className={`${activeSection === "contact" ? "text-white" : "text-greishh"} block transition-colors duration-200`}
           >
             Contact
           </a>
@@ -117,7 +117,7 @@ export default function Home() {
           <ul className="hidden list-none lg:inline-flex flex-row flex-nowrap m-0 p-0">
             <li className="">
               <a
-                className={`block pubSans font-normal text-[1.5rem] leading-[3.2rem] ${activeSection === "intro" ? "text-white" : "text-greishh"} transition-colors duration-200 px-[1.2rem] transition-colors`}
+                className={`block pubSans font-normal text-[1.5rem] leading-[3.2rem] ${activeSection === "intro" ? "text-white" : "text-greishh"} transition-colors duration-200 px-[1.2rem] hover:text-white`}
                 href="#intro"
               >
                 Intro
@@ -125,7 +125,7 @@ export default function Home() {
             </li>
             <li className="">
               <a
-                className={`block pubSans font-normal text-[1.5rem] leading-[3.2rem] ${activeSection === "about" ? "text-white" : "text-greishh"} transition-colors duration-200 px-[1.2rem] transition-colors`}
+                className={`block pubSans font-normal text-[1.5rem] leading-[3.2rem] ${activeSection === "about" ? "text-white" : "text-greishh"} transition-colors duration-200 px-[1.2rem] hover:text-white`}
                 href="#about"
               >
                 About
@@ -133,7 +133,7 @@ export default function Home() {
             </li>
             <li className="">
               <a
-                className={`block pubSans font-normal text-[1.5rem] leading-[3.2rem] ${activeSection === "skills" ? "text-white" : "text-greishh"} transition-colors duration-200 px-[1.2rem] transition-colors`}
+                className={`block pubSans font-normal text-[1.5rem] leading-[3.2rem] ${activeSection === "skills" ? "text-white" : "text-greishh"} transition-colors duration-200 px-[1.2rem] hover:text-white`}
                 href="#skills"
               >
                 Skills
@@ -141,7 +141,7 @@ export default function Home() {
             </li>
             <li className="">
               <a
-                className={`block pubSans font-normal text-[1.5rem] leading-[3.2rem] ${activeSection === "works" ? "text-white" : "text-greishh"} transition-colors duration-200 px-[1.2rem] transition-colors`}
+                className={`block pubSans font-normal text-[1.5rem] leading-[3.2rem] ${activeSection === "works" ? "text-white" : "text-greishh"} transition-colors duration-200 px-[1.2rem] hover:text-white`}
                 href="#works"
               >
                 Works
@@ -149,7 +149,15 @@ export default function Home() {
             </li>
             <li className="">
               <a
-                className={`block pubSans font-normal text-[1.5rem] leading-[3.2rem] ${activeSection === "contact" ? "text-white" : "text-greishh"} transition-colors duration-200 px-[1.2rem] transition-colors`}
+                className={`block pubSans font-normal text-[1.5rem] leading-[3.2rem] ${activeSection === "reveiws" ? "text-white" : "text-greishh"} transition-colors duration-200 px-[1.2rem] hover:text-white`}
+                href="#reveiws"
+              >
+                Reveiws
+              </a>
+            </li>
+            <li className="">
+              <a
+                className={`block pubSans font-normal text-[1.5rem] leading-[3.2rem] ${activeSection === "contact" ? "text-white" : "text-greishh"} transition-colors duration-200 px-[1.2rem] hover:text-white`}
                 href="#contact"
               >
                 Contact
@@ -222,6 +230,7 @@ export default function Home() {
                   transform: "", // (You may want to provide a value here or remove it if unused)
                   msFilter: "",
                 }}
+                className="animate-bounce"
               >
                 <path d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"></path>
               </svg>
@@ -279,7 +288,7 @@ export default function Home() {
           </div>
           <div className="">
             <button
-              onClink={handleDownload}
+              onClick={handleDownload}
               className="uppercase w-full md:w-[45rem] h-[6rem] mt-[5rem] text-[1.4rem] font-[700] tracking-widest roboto border-2 border-bgblack bg-[#130209] text-white"
             >
               download my cv
@@ -351,21 +360,31 @@ export default function Home() {
             <br className="hidden lg:block" /> make your company stand out
           </h1>
           <div className="max-w-[1280px] w-[100%] mt-[8.8rem] mx-auto grid grid-cols-1 lg:grid-cols-3 gap-x-[10px]">
-          <div className="px-[20px] serviceBorder">
+            <div className="px-[20px] serviceBorder">
               <h1 className="text-white text-[3.6rem] mb-[3.6rem] leading-[1.222] mt-o font-normal frank flex gap-5 items-center">
-                <Image src="/images/html.svg" width={50} height={50} />
+                <Image
+                  alt="html.svg"
+                  src="/images/html.svg"
+                  width={50}
+                  height={50}
+                />
                 HTML
               </h1>
             </div>
             <div className="px-[20px] serviceBorder">
               <h1 className="text-white text-[3.6rem] mb-[3.6rem] leading-[1.222] mt-o font-normal frank flex gap-5 items-center">
-                <Image src="/images/css.svg" width={50} height={50} />
+                <Image alt="css" src="/images/css.svg" width={50} height={50} />
                 CSS
               </h1>
             </div>
             <div className="px-[20px] serviceBorder">
               <h1 className="text-white text-[3.6rem] mb-[3.6rem] leading-[1.222] mt-o font-normal frank flex gap-5 items-center">
-                <Image src="/images/javascript.svg" width={50} height={50} />
+                <Image
+                  alt="javascript"
+                  src="/images/javascript.svg"
+                  width={50}
+                  height={50}
+                />
                 JavaScript
               </h1>
             </div>
@@ -374,7 +393,12 @@ export default function Home() {
                 01.
               </h1>*/}
               <h1 className="text-white text-[3.6rem] mb-[3.6rem] leading-[1.222] mt-o font-normal frank flex gap-5 items-center">
-                <Image src="/images/react.svg" width={50} height={50} />
+                <Image
+                  alt="react"
+                  src="/images/react.svg"
+                  width={50}
+                  height={50}
+                />
                 React
               </h1>
               {/*<p className="lora font-normal leading-[1.882] text-[1.7rem]">
@@ -387,7 +411,12 @@ export default function Home() {
             </div>
             <div className="px-[20px] serviceBorder">
               <h1 className="text-white text-[3.6rem] mb-[3.6rem] leading-[1.222] mt-o font-normal frank flex gap-5 items-center">
-                <Image src="/images/react.svg" width={50} height={50} />
+                <Image
+                  alt="react"
+                  src="/images/react.svg"
+                  width={50}
+                  height={50}
+                />
                 React Native
               </h1>
             </div>
@@ -396,7 +425,12 @@ export default function Home() {
                 01.
               </h1>*/}
               <h1 className="text-white text-[3.6rem] mb-[3.6rem] leading-[1.222] mt-o font-normal frank flex gap-5 items-center">
-                <Image src="/images/tailwind.svg" width={50} height={50} />
+                <Image
+                  alt="tailwind"
+                  src="/images/tailwind.svg"
+                  width={50}
+                  height={50}
+                />
                 tailwind
               </h1>
               {/*<p className="lora font-normal leading-[1.882] text-[1.7rem]">
@@ -409,19 +443,34 @@ export default function Home() {
             </div>
             <div className="px-[20px] serviceBorder">
               <h1 className="text-white text-[3.6rem] mb-[3.6rem] leading-[1.222] mt-o font-normal frank flex gap-5 items-center">
-                <Image src="/images/redux.svg" width={50} height={50} />
+                <Image
+                  alt="redux"
+                  src="/images/redux.svg"
+                  width={50}
+                  height={50}
+                />
                 Redux
               </h1>
             </div>
             <div className="px-[20px] serviceBorder">
               <h1 className="text-white text-[3.6rem] mb-[3.6rem] leading-[1.222] mt-o font-normal frank flex gap-5 items-center">
-                <Image src="/images/typescript.svg" width={50} height={50} />
+                <Image
+                  alt="typescript"
+                  src="/images/typescript.svg"
+                  width={50}
+                  height={50}
+                />
                 Typescript
               </h1>
             </div>
             <div className="px-[20px] serviceBorder">
               <h1 className="text-white text-[3.6rem] mb-[3.6rem] leading-[1.222] mt-o font-normal frank flex gap-5 items-center">
-                <Image src="/images/responsive.svg" width={50} height={50} />
+                <Image
+                  alt="responsive"
+                  src="/images/responsive.svg"
+                  width={50}
+                  height={50}
+                />
                 Responsive Design
               </h1>
             </div>
@@ -596,7 +645,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/*reviews section*/}
+      {/*reveiws section*/}
       <section
         id="reveiws"
         className="flex justify-center pt-[13.6rem] pb-[13.5rem] md:pt-[18.44rem] md:pb-[16rem] bg-prbg px-[3rem] relative"
@@ -606,7 +655,6 @@ export default function Home() {
             onClick={() => {
               setReview1(true);
               setReview2(false);
-              setReview3(false);
             }}
             className={`block w-[10px] h-[10px] leading-[10px] rounded-full ${review1 ? "bg-purplink" : "bg-black/40"} border-none p-0 m-0 cursor-pointer text-transparent shadow-none text-0`}
           />
@@ -614,56 +662,18 @@ export default function Home() {
             onClick={() => {
               setReview1(false);
               setReview2(true);
-              setReview3(false);
             }}
             className={`block w-[10px] h-[10px] leading-[10px] rounded-full ${review2 ? "bg-purplink" : "bg-black/40"} border-none p-0 m-0 cursor-pointer text-transparent shadow-none text-0`}
           />
-          <button
-            onClick={() => {
-              setReview1(false);
-              setReview2(false);
-              setReview3(true);
-            }}
-            className={`block w-[10px] h-[10px] transition-all duration-200 leading-[10px] rounded-full ${review3 ? "bg-purplink" : "bg-black/40"} border-none p-0 m-0 cursor-pointer text-transparent shadow-none text-0`}
-          />
-        </div>
-        <div
-          className={`w-[89%] max-w-[1280px] transition-opacity duration-500 ${review1 ? "opacity-100 block" : "opacity-0 hidden"}`}
-        >
-          <p className="text-[2.6rem] md:text-[3rem] lg:text-[3.2rem] xl:text-[3.8rem]  font-normal leading-[1.8] roboto text-black">
-            Molestiae incidunt consequatur quis ipsa autem nam sit enim magni.
-            Voluptas tempore rem. Explicabo a quaerat sint autem dolore ducimus
-            ut consequatur neque. Nisi dolores quaerat fuga rem nihil nostrum.
-            Laudantium quia consequatur molestias delectus culpa.
-          </p>
-          <div className="flex items-center gap-6 mt-[8rem] ">
-            <div className="w-[7.2rem] h-[7.2rem] relative">
-              {" "}
-              <Image
-                src="/images/user-04.jpg"
-                fill
-                alt="comment"
-                className="rounded-[50%] object-cover"
-              />
-            </div>
-            <div>
-              <h1 className="text-[2.4rem] leading-[1.5] roboto font-[700]">
-                Satya Nadella
-              </h1>
-              <h6 className="text-[1.8rem] leading-[1.333] text-black/70 roboto font-normal">
-                CEO, microsoft
-              </h6>
-            </div>
-          </div>
         </div>
         <div
           className={`w-[89%] max-w-[1280px] transition-opacity duration-500 ${review2 ? "opacity-100 block" : "opacity-0 hidden"}`}
         >
           <p className="text-[2.6rem] md:text-[3rem] lg:text-[3.2rem] xl:text-[3.8rem]  font-normal leading-[1.8] roboto text-black">
-            Excepturi nam cupiditate culpa doloremque deleniti repellat. Veniam
-            quos repellat voluptas animi adipisci. Nisi eaque consequatur.
-            Voluptatem dignissimos ut ducimus accusantium perspiciatis. Quasi
-            voluptas eius distinctio. Atque eos maxime.
+            Iyanuoluwa did an outstanding job developing the landing page for
+            Ojuju Web. his work effectively showcased the UI design for our
+            platform. Iyanuoluwa delivered a responsive and user-friendly design
+            that emphasizes the platform’s simplicity and innovation.
           </p>
           <div className="flex items-center gap-6 mt-[8rem] ">
             <div className="w-[7.2rem] h-[7.2rem] relative">
@@ -677,28 +687,30 @@ export default function Home() {
             </div>
             <div>
               <h1 className="text-[2.4rem] leading-[1.5] roboto font-[700]">
-                Satya Nadella
+                John Paul
               </h1>
               <h6 className="text-[1.8rem] leading-[1.333] text-black/70 roboto font-normal">
-                CEO, microsoft
+                CEO, Ojuju Web
               </h6>
             </div>
           </div>
         </div>
         <div
-          className={`w-[89%] max-w-[1280px] transition-all duration-500 ${review3 ? "opacity-100 block" : "opacity-0 hidden"}`}
+          className={`w-[89%] max-w-[1280px] transition-opacity duration-500 ${review1 ? "opacity-100 block" : "opacity-0 hidden"}`}
         >
           <p className="text-[2.6rem] md:text-[3rem] lg:text-[3.2rem] xl:text-[3.8rem]  font-normal leading-[1.8] roboto text-black">
-            Repellat dignissimos libero. Qui sed at corrupti expedita voluptas
-            odit. Nihil ea quia nesciunt. Ducimus aut sed ipsam. Autem eaque
-            officia cum exercitationem sunt voluptatum accusamus. Quasi voluptas
-            eius distinctio. Voluptatem dignissimos ut.
+            At Local Ramp, Iyanuoluwa was a skilled front-end developer,
+            creating responsive and user-friendly interfaces for our currency
+            conversion platform. They effectively integrated real-time data and
+            optimized performance, enhancing the UI for a smooth user
+            experience. his work was crucial in delivering a modern and
+            efficient platform
           </p>
           <div className="flex items-center gap-6 mt-[8rem] ">
             <div className="w-[7.2rem] h-[7.2rem] relative">
               {" "}
               <Image
-                src="/images/user-04.jpg"
+                src="/images/localramp_logo.jpeg"
                 fill
                 alt="comment"
                 className="rounded-[50%] object-cover"
@@ -706,10 +718,10 @@ export default function Home() {
             </div>
             <div>
               <h1 className="text-[2.4rem] leading-[1.5] roboto font-[700]">
-                Satya Nadella
+                TJ
               </h1>
               <h6 className="text-[1.8rem] leading-[1.333] text-black/70 roboto font-normal">
-                CEO, microsoft
+                Software Engineer, LocalRamp
               </h6>
             </div>
           </div>
@@ -771,9 +783,15 @@ export default function Home() {
             <div className="pr-[1rem] pl-[1.2rem] text-white/10 inline-block text-[14px] ">
               |
             </div>
-            <div className="text-white/10 inline-block text-[14px]"></div>
+            <div className="text-white/10 inline-block text-[14px]">
+              {" "}
+              design by StyleOut
+            </div>
           </div>
-          <a href="#intro" className="block ml-auto hover:bg-purplink transition-colors duration-300 bg-white/5 no-underline m-0 p-0 border-0 h-[60px] w-[60px] leading-[60px] text-center text-white uppercase bg-no-repeat bg-center bg-[url('/images/icon-arrow-up.svg')] relative">
+          <a
+            href="#intro"
+            className="block ml-auto hover:bg-purplink transition-colors duration-300 bg-white/5 no-underline m-0 p-0 border-0 h-[60px] w-[60px] leading-[60px] text-center text-white uppercase bg-no-repeat bg-center bg-[url('/images/icon-arrow-up.svg')] relative"
+          >
             <div className="block w-[1px] h-[100px] bg-white/5 absolute top-[-115px] left-1/2"></div>
             <div className="block float-left w-[120px] text-[1.2rem] leading-[30px] uppercase tracking-[.2rem] text-white/15 transition-all duration-500 origin-[left_bottom] rotate-[-90deg] absolute left-[calc(30px+15px)] top-[-165px] roboto">
               {" "}
