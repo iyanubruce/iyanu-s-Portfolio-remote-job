@@ -1,16 +1,39 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import {
+  Public_Sans,
+  Castoro,
+  Lora,
+  Roboto,
+  Frank_Ruhl_Libre,
+} from "next/font/google";
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+const publicSans = Public_Sans({
+  subsets: ["latin"],
+  variable: "--font-publicsans",
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+
+const frank_ruhl_libre = Frank_Ruhl_Libre({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-franklibre",
+});
+
+const roboto = Roboto({
+  subsets: ["latin"],
+  weight: ["100", "300", "400", "500", "700", "900"],
+  variable: "--font-roboto",
+});
+
+const lora = Lora({
+  subsets: ["latin"],
+  variable: "--font-lora",
+});
+
+const castoro = Castoro({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-castoro",
 });
 
 export const metadata: Metadata = {
@@ -26,7 +49,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={` ${frank_ruhl_libre.variable} ${roboto.variable} ${publicSans.variable} ${castoro.variable} ${lora.variable} antialiased`}
       >
         {children}
       </body>

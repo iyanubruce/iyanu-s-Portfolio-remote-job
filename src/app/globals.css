@@ -5,23 +5,242 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --width-grid-max: calc(1720px-calc(2.6rem * 2));
+  --content-padding-top: max(20rem, 18vh);
+  --content-padding-bottom: 8rem;
+  --content-min-height: calc(calc(calc(3.2rem * 1)) * 27);
+  --vspace-1_25: calc(1.25 * calc(3.2rem * 1));
+  --vspace-2: calc(2 * calc(3.2rem * 1));
+  --vspace-btn: calc(1.75 * calc(3.2rem * 1));
+  --text-size: calc(2rem * 1);
+  --vspace-0_5: calc(0.5 * calc(3.2rem * 1));
+  --vspace-0_75: calc(0.75 * calc(3.2rem * 1));
+  --vspace-1_25: calc(1.25 * calc(3.2rem * 1));
+  --vspace-1: calc(0.1 * calc(3.2rem * 1));
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
 }
-
 body {
-  color: var(--foreground);
-  background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
-
+body {
+  @apply bg-bgAsh;
+}
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.pubSans {
+  font-family: var(--font-publicsans);
+}
+
+.castoro {
+  font-family: var(--font-castoro);
+}
+
+.lora {
+  font-family: var(--font-lora);
+}
+
+.roboto {
+  font-family: var(--font-roboto);
+}
+
+.frank {
+  font-family: var(--font-franklibre);
+}
+
+.container {
+  --width-grid-max: calc(1720px - calc(2.6rem * 2));
+}
+
+.rowl {
+  max-width: var(--width-grid-max);
+}
+.section1 {
+  height: max(var(--content-min-height), 100vh);
+}
+
+.div1 {
+  z-index: 2;
+  align-items: flex-end;
+  height: 100%;
+  padding-top: var(--content-padding-top);
+  padding-bottom: var(--content-padding-bottom);
+  position: relative;
+  width: min(92%, 1760px);
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.herol {
+  font-size: clamp(3.8rem, 4.8vw, 8.8rem);
+  line-height: 1.045;
+  letter-spacing: -0.025em;
+  margin-top: 0;
+  margin-bottom: var(--vspace-1_25);
+}
+
+.btnDiv {
+  --color-btn: var(--color-text-dark);
+  --color-btn-text: var(--color-white);
+  --color-btn-hover: var(--color-1);
+  --color-btn-hover-text: var(--color-white);
+  margin-top: var(--vspace-2);
+}
+
+.Hbtn {
+  --btn-height: var(--vspace-btn);
+  display: inline-block;
+  font-weight: 500;
+  font-size: calc(var(--text-size) * 0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  height: var(--vspace-btn);
+  line-height: calc(var(--vspace-btn) - 4px);
+  padding: 0 3.6rem;
+  margin: 0 0.4rem var(--vspace-0_5) 0;
+  text-decoration: none;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.3s;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.shadowOverlay {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 2;
+  background: radial-gradient(circle, rgba(0, 0, 0, 0) 0%, black 80%);
+}
+.darkbg {
+  background: rgba(5, 5, 5);
+}
+.imagebg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("/images/services-bg.jpg");
+  color: rgba(255, 255, 255, 0.7);
+  background-position: center center;
+}
+
+.serviceBorder {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 3.6rem;
+}
+@media (max-width: 1024px) {
+  .div1 {
+    align-items: center;
+    padding-bottom: var(--vspace-0_75);
+  }
+  .Hbtn {
+    width: 100%;
+    max-width: 400px;
+  }
+  .herol {
+    font-size: clamp(4.2rem, 8.2vw, 8.8rem);
+    color: white;
+    line-height: 1.045;
+    letter-spacing: -0.025em;
+    margin-top: 0;
+    margin-bottom: var(--vspace-1_25);
+  }
+  .rowl {
+    width: 100%;
+  }
+  .btnDiv {
+    margin: var(--vspace-1) auto 85px;
+  }
+}
+
+.gradient-box {
+  position: relative; /* Ensure positioning context for the pseudo-element */
+  background-image: radial-gradient(
+    circle at 50% 0,
+    #ffffff4d,
+    #0000
+  ); /* Main background */
+  transition: background-image 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  isolation: isolate; /* To ensure this element forms a stacking context */
+  overflow: hidden; /* Prevent the pseudo-element from overflowing the box */
+}
+
+.gradient-box::before {
+  content: ""; /* Required for pseudo-elements to display */
+  position: absolute;
+  inset: 0; /* Cover the whole box */
+  background-image: radial-gradient(circle at 50% 0, #7fcfff33, transparent 80%),
+    radial-gradient(circle at 50% 0, #035, transparent);
+  z-index: -1; /* Position the pseudo-element behind the content */
+  transition: opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  opacity: 0; /* Optional if you want transition on the before element */
+}
+
+.projectIcon {
+  transform: translateX(-10px);
+  transition-duration: 0.4s;
+}
+.vProject {
+  opacity: 0;
+  font-size: 2rem;
+  transition-duration: 0.4s;
+}
+
+vProject:hover {
+  text-decoration: underline;
+}
+
+.imageDiv {
+  isolation: isolate;
+}
+
+.about {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 1;
+  transition-duration: .4s;
+}
+
+.imageDiv:hover .about{
+  opacity: 1;
+}
+
+@media(max-width:1000px){
+  .about{
+    opacity: 1;
+  }
+  .gradient-box:before {
+    opacity: 1;
+  }
+}
+@media (hover: hover) {
+  .gradient-box:hover::before {
+    opacity: 1;
+  }
+  .gradient-box:hover .projectIcon {
+    transform: translateX(10px); /* Change the transform property */
+  }
+  .gradient-box:hover .vProject {
+    opacity: 1;
+  }
+}
+
+.translateZ{
+  transform: translateZ(10000px);
 }

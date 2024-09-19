@@ -14,7 +14,9 @@
     "incremental": true,
     "plugins": [
       {
-        "name": "next"
+        "name": "next",
+        "@components/*": ["components/*"], // Alias for components folder
+        "@utils/*": ["utils/*"], // Alias for utils folder
       }
     ],
     "paths": {
