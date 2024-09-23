@@ -38,6 +38,7 @@ const config: Config = {
     },
   },
   plugins: [
+    //@ts-ignore
     function ({ addUtilities }) {
       addUtilities(
         {

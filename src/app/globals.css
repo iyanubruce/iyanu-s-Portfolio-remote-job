@@ -244,3 +244,16 @@ vProject:hover {
 .translateZ{
   transform: translateZ(10000px);
 }
+
+.commentOpen {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1s ease;
+}
+
+.commentClosed {
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+  transition: opacity 1s ease;
+}

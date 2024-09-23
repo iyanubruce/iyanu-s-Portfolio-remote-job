@@ -2,9 +2,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 export default function Home() {
-  const router = useRouter();
   const [menuOpen, setMenuOpen] = useState(false);
   const [review1, setReview1] = useState(true);
   const [review2, setReview2] = useState(false);
@@ -12,13 +10,14 @@ export default function Home() {
   const [activeSection, setActiveSection] = useState("");
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/images/redux.png";
-    link.download = "/redux.png";
+    link.href = "/Resume/IYANUOLUWA_TAIWO_Resume.docx.pdf";
+    link.download = "/IYANUOLUWA_TAIWO_Resume.docx.pdf";
     link.click();
   };
   useEffect(() => {
     const handleScroll = () => {
       const heroSectionHeight =
+      //@ts-expect-error/objectNull
         document.querySelector(".hero-section").offsetHeight;
       if (window.scrollY > heroSectionHeight) {
         setIsFixed(true);
@@ -55,7 +54,7 @@ export default function Home() {
       >
         <div className="absolute h-full w-full lg:w-1/2 right-0 z-[0]">
           <Image
-            src="/images/intro-bg.jpg"
+            src="/images/intro-bg.png"
             alt="introbg"
             fill
             className="object-cover"
@@ -104,7 +103,7 @@ export default function Home() {
         <div
           className={`flex z-[9999999] ${isFixed ? "fixed w-[100%] translate-y-0 opacity-100" : "absolute lg:mt-10 w-[92%] "} transition-all duration-500 ease-in-out top-0 left-0 right-0 mt-0 items-center justify-between mx-auto bg-bgblack h-[72px] px-[2.6rem] rowl text-white`}
         >
-          <span className="text-4xl castoro">Hudson.</span>{" "}
+          <span className="text-4xl castoro">Taiwo.</span>{" "}
           <button
             aria-label="Toggle Menu"
             onClick={() => setMenuOpen(!menuOpen)}
@@ -218,7 +217,7 @@ export default function Home() {
             <div className="hidden md:block h-32 w-[1px] bg-white my-10"></div>
             <a
               href="#about"
-              className="grid place-content-center p-[2.1rem] border-2 border-white rounded-[50%] "
+              className="grid animate-bounce place-content-center p-[2.1rem] border-2 border-white rounded-[50%] "
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -230,7 +229,7 @@ export default function Home() {
                   transform: "", // (You may want to provide a value here or remove it if unused)
                   msFilter: "",
                 }}
-                className="animate-bounce"
+                className=""
               >
                 <path d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"></path>
               </svg>
@@ -275,7 +274,7 @@ export default function Home() {
               latest web technologies and best practices.
             </p>
             <p>
-              Whether it's building a sleek portfolio, a complex web
+              Whether it&apos;s building a sleek portfolio, a complex web
               application, or optimizing performance, I’m driven by the
               challenge of creating solutions that not only look great but work
               flawlessly.
@@ -537,7 +536,7 @@ export default function Home() {
                   Made with
                 </span>{" "}
                 <span className="text-[#f2f2f2cc] font-medium castoro">
-                  :&quot;React, tailwind, REST api's&quot;
+                  :&quot;React, tailwind, REST api&apos;s&quot;
                 </span>
               </div>
               <div className="w-[90%] imageDiv aspect-[16/9] mx-auto relative">
@@ -568,9 +567,9 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="w-full rounded-[24px]  p-[10px] h-[600px] bg-white">
+          <div className="w-full rounded-[24px] mb-[10rem]  p-[10px] h-[600px] bg-white">
             <div
-              onClick={() => window.open("https://www.ojuju.ng/", "_blank")}
+              onClick={() => window.open("https://www.ojuju.ng", "_blank")}
               className={`w-full block rounded-[20px] h-full bg-black p-[30px] overflow-hidden gradient-box`}
             >
               <div className="text-white text-[24px] frank flex justify-between items-center">
@@ -612,7 +611,7 @@ export default function Home() {
                   Made with
                 </span>{" "}
                 <span className="text-[#f2f2f2cc] font-medium castoro">
-                  :&quot;React, Nextjs, tailwind, REST api's&quot;
+                  :&quot;React, Nextjs, tailwind, REST api&apos;s&quot;
                 </span>
               </div>
               <div className="w-[90%] imageDiv aspect-[16/9] mx-auto relative">
@@ -633,6 +632,75 @@ export default function Home() {
                     curated selection of high-end clothing{" "}
                     <br className="hidden md:block" />
                     for the discerning shopper
+                  </p>
+                  <h1 className="text-center text-[3rem] castoro">My Role</h1>
+                  <p className="text-center text-[2rem] lora font-semibold">
+                    Frontend Developer
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="w-full rounded-[24px]  p-[10px] h-[600px] bg-white">
+            <div
+              onClick={() => window.open("https://online-learning-platform-8efe-r0p4nre5z-iyanubruces-projects.vercel.app/", "_blank")}
+              className={`w-full block rounded-[20px] h-full bg-black p-[30px] overflow-hidden gradient-box`}
+            >
+              <div className="text-white text-[24px] frank flex justify-between items-center">
+                <span>Stellar Study</span>
+                <Link
+                  href="https://www.ojuju.ng/"
+                  passHref
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="vProject hover:underline decoration-[1px] underline-offset-[3px]"
+                >
+                  Veiw Project
+                </Link>
+                <span className="projectIcon">
+                  <svg
+                    width="40"
+                    height="40"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M14.025 17.9508L12.95 16.9008L17.15 12.7008H4V11.2008H17.15L12.925 6.97578L14 5.92578L20.025 11.9508L14.025 17.9508Z"
+                      fill="#Ffffff"
+                    />
+                  </svg>
+                </span>
+              </div>
+              <div className="text-[#f2f2f280] tracking-[0.2px] self-stretch pr-8 font-sans font-light text-[14px] leading-[20px]">
+                <span className="text-[#f2f2f2cc] font-medium castoro">
+                  Stellar Study
+                </span>{" "}
+                <span>—&quot;The future of online learning.&quot;</span>
+              </div>
+              <div className="mb-10 tracking-[0.2px] self-stretch pr-8 font-sans font-light text-[18px] leading-[20px]">
+                <span className="text-white font-medium castoro">
+                  Made with
+                </span>{" "}
+                <span className="text-[#f2f2f2cc] font-medium castoro">
+                  :&quot;React, Nextjs, tailwind&quot;
+                </span>
+              </div>
+              <div className="w-[90%] imageDiv aspect-[16/9] mx-auto relative">
+                <Image
+                  src="/images/StelarStudy.png"
+                  fill
+                  alt="localramp"
+                  className="object-cover rounded"
+                />
+                <div className="about text-white pt-0 md:pt-[10rem]">
+                  <h1 className="text-center text-[4rem] md:text-[5rem] castoro">
+                    Project Description
+                  </h1>
+                  <p className="text-center text-[2rem] lora">
+                    An online learning platform where instructors can create and<br className="hidden md:block" />
+                    sell courses, offering students easy access to high-quality<br className="hidden md:block" />
+                    learning resources across various subjects
                   </p>
                   <h1 className="text-center text-[3rem] castoro">My Role</h1>
                   <p className="text-center text-[2rem] lora font-semibold">
@@ -667,7 +735,7 @@ export default function Home() {
           />
         </div>
         <div
-          className={`w-[89%] max-w-[1280px] transition-opacity duration-500 ${review2 ? "opacity-100 block" : "opacity-0 hidden"}`}
+          className={`w-[89%] max-w-[1280px] ${review2 ? "commentOpen" : "commentClosed"}`}
         >
           <p className="text-[2.6rem] md:text-[3rem] lg:text-[3.2rem] xl:text-[3.8rem]  font-normal leading-[1.8] roboto text-black">
             Iyanuoluwa did an outstanding job developing the landing page for
@@ -679,7 +747,7 @@ export default function Home() {
             <div className="w-[7.2rem] h-[7.2rem] relative">
               {" "}
               <Image
-                src="/images/user-04.jpg"
+                src="/images/user-04.jpeg"
                 fill
                 alt="comment"
                 className="rounded-[50%] object-cover"
@@ -696,7 +764,7 @@ export default function Home() {
           </div>
         </div>
         <div
-          className={`w-[89%] max-w-[1280px] transition-opacity duration-500 ${review1 ? "opacity-100 block" : "opacity-0 hidden"}`}
+          className={`w-[89%] max-w-[1280px] ${review1 ? "commentOpen" : "commentClosed"}`}
         >
           <p className="text-[2.6rem] md:text-[3rem] lg:text-[3.2rem] xl:text-[3.8rem]  font-normal leading-[1.8] roboto text-black">
             At Local Ramp, Iyanuoluwa was a skilled front-end developer,
