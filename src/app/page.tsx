@@ -201,7 +201,7 @@ export default function Home() {
 
           <div className="flex-col md:flex hidden items-center absolute right-5 bottom-[5rem]">
             <Link
-              href="https://www.linkedin.com/in/iyanuoluwa-ikechukwu-231345324/"
+              href="www.linkedin.com/in/iyanuoluwa-taiwo-25537632b"
               className="md:flex hidden w-10 h-10 relative"
               passHref
               target="_blank"
@@ -831,7 +831,7 @@ export default function Home() {
                 Social
               </div>
               <Link
-                href="https://www.linkedin.com/in/iyanuoluwa-ikechukwu-231345324/"
+                href="www.linkedin.com/in/iyanuoluwa-taiwo-25537632b"
                 className="text-[4.2rem] hover:text-purplink duration-500 transition-colors font-normal frank leading-[1.259] text-white"
               >
                 Linkedin
