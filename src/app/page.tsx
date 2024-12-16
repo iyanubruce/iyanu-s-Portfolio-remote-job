@@ -16,13 +16,17 @@ export default function Home() {
   };
   useEffect(() => {
     const handleScroll = () => {
-      const heroSectionHeight =
-      //@ts-expect-error/objectNull
-        document.querySelector(".hero-section").offsetHeight;
-      if (window.scrollY > heroSectionHeight) {
-        setIsFixed(true);
-      } else {
-        setIsFixed(false);
+      const heroSectionHeight: number | null =
+        document.querySelector<HTMLElement>(".hero-section")
+          ? document.querySelector<HTMLElement>(".hero-section")!.offsetHeight
+          : null;
+
+      if (heroSectionHeight !== null) {
+        if (window.scrollY > heroSectionHeight) {
+          setIsFixed(true);
+        } else {
+          setIsFixed(false);
+        }
       }
     };
     const sections = document.querySelectorAll("section");
@@ -36,7 +40,7 @@ export default function Home() {
       },
       {
         threshold: 0.1, // 60% of the section must be visible to activate
-      },
+      }
     );
     sections.forEach((section) => observer.observe(section));
     window.addEventListener("scroll", handleScroll);
@@ -643,7 +647,12 @@ export default function Home() {
           </div>
           <div className="w-full rounded-[24px]  p-[10px] h-[600px] bg-white">
             <div
-              onClick={() => window.open("https://online-learning-platform-8efe-r0p4nre5z-iyanubruces-projects.vercel.app/", "_blank")}
+              onClick={() =>
+                window.open(
+                  "https://online-learning-platform-8efe-r0p4nre5z-iyanubruces-projects.vercel.app/",
+                  "_blank"
+                )
+              }
               className={`w-full block rounded-[20px] h-full bg-black p-[30px] overflow-hidden gradient-box`}
             >
               <div className="text-white text-[24px] frank flex justify-between items-center">
@@ -698,8 +707,10 @@ export default function Home() {
                     Project Description
                   </h1>
                   <p className="text-center text-[2rem] lora">
-                    An online learning platform where instructors can create and<br className="hidden md:block" />
-                    sell courses, offering students easy access to high-quality<br className="hidden md:block" />
+                    An online learning platform where instructors can create and
+                    <br className="hidden md:block" />
+                    sell courses, offering students easy access to high-quality
+                    <br className="hidden md:block" />
                     learning resources across various subjects
                   </p>
                   <h1 className="text-center text-[3rem] castoro">My Role</h1>
