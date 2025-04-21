@@ -160,7 +160,7 @@ export default function Home() {
             <div className="herol castoro font-medium text-center lg:text-left">
               I&apos;m <br />
               Iyanuoluwa Taiwo
-              <br /> a Frontend developer
+              <br /> a Software developer
             </div>
             <div className="btnDiv w-full items-center lg:w-max flex flex-col lg:flex-row lg:gap-5">
               <a
