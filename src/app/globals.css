@@ -143,6 +143,9 @@ body {
     align-items: center;
     padding-bottom: var(--vspace-0_75);
   }
+  .serviceBorder {
+    padding-top: 1rem;
+  }
   .Hbtn {
     width: 100%;
     max-width: 400px;
@@ -214,15 +217,15 @@ vProject:hover {
   height: 100%;
   opacity: 0;
   z-index: 1;
-  transition-duration: .4s;
+  transition-duration: 0.4s;
 }
 
-.imageDiv:hover .about{
+.imageDiv:hover .about {
   opacity: 1;
 }
 
-@media(max-width:1000px){
-  .about{
+@media (max-width: 1000px) {
+  .about {
     opacity: 1;
   }
   .gradient-box:before {
@@ -241,7 +244,7 @@ vProject:hover {
   }
 }
 
-.translateZ{
+.translateZ {
   transform: translateZ(10000px);
 }
 

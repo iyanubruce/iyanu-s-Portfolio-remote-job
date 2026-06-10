@@ -2,6 +2,10 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import Service from "@/components/service";
+import ServiceHeading from "@/components/service-heading";
+import ServicesContainer from "@/components/services-container";
+import ProjectCard from "@/components/project";
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [review1, setReview1] = useState(true);
@@ -309,19 +313,24 @@ export default function Home() {
               <div className="frank text-[3.6rem] font-[500] leading-[1.22]">
                 Localramp
               </div>
-              <div className="text-[2.1rem] font-[400] leading-[1.333] mt-0 roboto font-ligatures text-rendering-optimize">
-                Frontend Developer
+              <div className="text-[2.1rem] font-[400] leading-[1.333] mt-0 lora font-ligatures text-rendering-optimize">
+                SoftWare Engineer
               </div>
               <p className="font-normal not-italic leading-[1.882] block my-4 mx-0 text-[16px] text-justify md:text-left  md:text-[1.7rem] roboto">
-                At Local Ramp, I worked as a front-end developer, building
-                responsive and user-friendly interfaces for a platform that
-                provides an API to convert local currencies to digital
-                currencies and vice versa. I collaborated with back-end teams to
-                integrate real-time currency data, optimize performance, and
-                ensure smooth user experiences across devices. My role also
-                involved enhancing the UI for seamless interaction with the
-                currency conversion features, ensuring a modern and efficient
-                platform.
+                When I joined LocalRamp as Lead Developer, I wore two main hats.
+                I stepped in to lead our backend engineering team, while
+                simultaneously operating as a full-stack engineer to bridge our
+                entire product together. On the backend, I led the team in
+                architecting a high-security fiat-to-crypto gateway, ensuring
+                our infrastructure could safely handle automated payout logic
+                and high-concurrency transaction volumes.On the frontend, I took
+                complete ownership of building our core infrastructure, user
+                dashboards, and embeddable widgets from scratch. My goal was to
+                take those complex blockchain data layers and turn them into
+                clean, lightning-fast, responsive interfaces. By leading the
+                backend strategy and executing the frontend delivery, I was able
+                to ensure our real-time payment APIs and user-facing dashboards
+                worked together perfectly without missing a beat.
               </p>
             </div>
             <div className="p-10">
@@ -331,21 +340,23 @@ export default function Home() {
               <div className="frank text-[3.6rem] font-[500] leading-[1.22]">
                 Taja
               </div>
-              <div className="text-[2.1rem] font-[400] leading-[1.333] mt-0 roboto font-ligatures text-rendering-optimize">
-                Backend Developer
+              <div className="text-[2.1rem] font-[400] lora leading-[1.333] mt-0  font-ligatures text-rendering-optimize">
+                Software Engineer
               </div>
               <p className="font-normal not-italic leading-[1.882] block my-4 mx-0 text-[16px] text-justify md:text-left  md:text-[1.7rem] roboto">
-                As a Back-End Engineer at Taja, I designed and maintained
-                RESTful APIs to power client applications, streamlining data
-                flow and integration with front-end services. By optimizing
-                database queries and server-side logic, I achieved a 10%
-                reduction in load times, significantly boosting data processing
-                efficiency. I also implemented robust security best practices to
-                enhance API security and safeguard sensitive data across
-                platforms. Working closely with front-end developers and UI/UX
-                designers, I ensured seamless integration of backend
-                functionality with user-facing features, delivering a cohesive
-                and high-performing product.
+                At Taja, I joined as a Backend Engineer focused on making sure
+                our client apps ran smoothly and securely. My day-to-day was
+                centered around designing and maintaining the core RESTful APIs
+                that fed data to our frontend. One of my favorite wins there was
+                diving deep into our database queries and server-side logic to
+                optimize performance, which ended up shaving 10% off our overall
+                load times and giving our processing efficiency a massive boost.
+                I also took full responsibility for our security, setting up
+                best practices to protect sensitive user data across our
+                environments. I worked hand-in-hand with our frontend developers
+                and UI/UX designers, acting as the bridge that brought complex
+                backend mechanics into clean, snappy, and cohesive user-facing
+                features.
               </p>
             </div>
           </div>
@@ -363,126 +374,158 @@ export default function Home() {
             capabilities
             <div className="bg-purplink h-[2px] w-[140px] absolute bottom-[-20px] left-[50%] transform translate-x-[-50%]" />
           </h1>
-          <h1 className="text-[4rem] md:text-[5.4rem] font-normal leading-[1.259] tracing-[-0.05rem] text-white text-center frank">
+          <h1 className="text-[2.5rem] md:text-[5.4rem] font-normal leading-[1.259] tracing-[-0.05rem] text-white text-center frank">
             My passion and goal is to help you
             <br className="hidden lg:block" /> make your company stand out
           </h1>
-          <div className="max-w-[1280px] w-[100%] mt-[8.8rem] mx-auto grid grid-cols-1 lg:grid-cols-3 gap-x-[10px]">
-            <div className="px-[20px] serviceBorder">
-              <h1 className="text-white text-[3.6rem] mb-[3.6rem] leading-[1.222] mt-o font-normal frank flex gap-5 items-center">
-                <Image
-                  alt="html.svg"
-                  src="/images/html.svg"
-                  width={50}
-                  height={50}
+          <ServiceHeading
+            heading="Backend Engineering"
+            icon={
+              <svg
+                xmlns="http://w3.org"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                fill="none"
+                stroke="#0d9488"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                <line x1="10" y1="6" x2="10.01" y2="6"></line>
+                <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                <line x1="10" y1="18" x2="10.01" y2="18"></line>
+              </svg>
+            }
+          />
+          <ServicesContainer>
+            <Service serviceName="Node.js / JavaScript (CommonJS & ES6) / TypeScript" />
+            <Service serviceName="Scalable Microservices Architecture" />
+            <Service serviceName="Idempotent & Retry-Safe System Design" />
+            <Service serviceName="High-Concurrency & Rate Limiting" />
+            <Service serviceName="Distributed Queue Management & Workers" />
+            <Service serviceName="Monolith-to-Microservices Migration" />
+          </ServicesContainer>
+          <ServiceHeading
+            heading="Architecture & Data"
+            icon={
+              <svg
+                xmlns="http://w3.org"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                fill="none"
+                stroke="#2563eb"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                <path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"></path>
+              </svg>
+            }
+          />
+          <ServicesContainer>
+            {" "}
+            <Service serviceName="PostgreSQL (Schema Design, Constraints, Indexing)" />
+            <Service serviceName="Redis (Caching, Locks, Distributed Queues)" />
+            <Service serviceName="RESTful & Unified API Design" />
+            <Service serviceName="Webhook Lifecycle & API Integration" />
+            <Service serviceName="Database Migrations & Data Isolation" />
+          </ServicesContainer>{" "}
+          <ServiceHeading
+            heading="DevOps & Cloud Reliability"
+            icon={
+              <svg
+                xmlns="http://w3.org"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                fill="none"
+                stroke="#4f46e5"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="6" y1="3" x2="6" y2="15"></line>
+                <circle cx="18" cy="6" r="3"></circle>
+                <circle cx="6" cy="18" r="3"></circle>
+                <path d="M18 9a9 9 0 0 1-9 9"></path>
+              </svg>
+            }
+          />
+          <ServicesContainer>
+            <Service serviceName="Infrastructure-as-Code (IaC) via Terraform" />
+            <Service serviceName="Containerisation (Docker, Docker Compose)" />
+            <Service serviceName="Automated Regression Testing & Smoke Testing" />
+            <Service serviceName="Production Observability, Logging, & Monitoring" />
+            <Service serviceName="Continuous Integration / Continuous Deployment (CI/CD)" />
+          </ServicesContainer>
+          <ServiceHeading
+            heading="Frontend Engineering"
+            icon={
+              <svg
+                xmlns="http://w3.org"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                fill="none"
+                stroke="#38bdf8"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                <line x1="2" y1="8" x2="22" y2="8" />
+                <rect
+                  x="14"
+                  y="11"
+                  width="7"
+                  height="10"
+                  rx="1"
+                  fill="#000000"
                 />
-                HTML
-              </h1>
-            </div>
-            <div className="px-[20px] serviceBorder">
-              <h1 className="text-white text-[3.6rem] mb-[3.6rem] leading-[1.222] mt-o font-normal frank flex gap-5 items-center">
-                <Image alt="css" src="/images/css.svg" width={50} height={50} />
-                CSS
-              </h1>
-            </div>
-            <div className="px-[20px] serviceBorder">
-              <h1 className="text-white text-[3.6rem] mb-[3.6rem] leading-[1.222] mt-o font-normal frank flex gap-5 items-center">
-                <Image
-                  alt="javascript"
-                  src="/images/javascript.svg"
-                  width={50}
-                  height={50}
-                />
-                JavaScript
-              </h1>
-            </div>
-            <div className="px-[20px] serviceBorder ">
-              {/*<h1 className="text-purplink font-light text-[7.2rem] mb-[4.8rem] roboto  leading-[1]">
-                01.
-              </h1>*/}
-              <h1 className="text-white text-[3.6rem] mb-[3.6rem] leading-[1.222] mt-o font-normal frank flex gap-5 items-center">
-                <Image
-                  alt="react"
-                  src="/images/react.svg"
-                  width={50}
-                  height={50}
-                />
-                React
-              </h1>
-              {/*<p className="lora font-normal leading-[1.882] text-[1.7rem]">
-                Sit ut cum molestiae. Dolore ducimus qui quasi. Fugiat
-                consequatur sit vel illum vel et a delectus. Vel sequi vitae
-                voluptatem perspiciatis eligendi. Voluptatibus optio natus
-                asperiores est commodi amet quia architecto. Dolores
-                necessitatibus et.
-              </p>*/}
-            </div>
-            <div className="px-[20px] serviceBorder">
-              <h1 className="text-white text-[3.6rem] mb-[3.6rem] leading-[1.222] mt-o font-normal frank flex gap-5 items-center">
-                <Image
-                  alt="react"
-                  src="/images/react.svg"
-                  width={50}
-                  height={50}
-                />
-                React Native
-              </h1>
-            </div>
-            <div className="px-[20px] serviceBorder">
-              {/*<h1 className="text-purplink font-light text-[7.2rem] mb-[4.8rem] roboto  leading-[1]">
-                01.
-              </h1>*/}
-              <h1 className="text-white text-[3.6rem] mb-[3.6rem] leading-[1.222] mt-o font-normal frank flex gap-5 items-center">
-                <Image
-                  alt="tailwind"
-                  src="/images/tailwind.svg"
-                  width={50}
-                  height={50}
-                />
-                tailwind
-              </h1>
-              {/*<p className="lora font-normal leading-[1.882] text-[1.7rem]">
-                Sit ut cum molestiae. Dolore ducimus qui quasi. Fugiat
-                consequatur sit vel illum vel et a delectus. Vel sequi vitae
-                voluptatem perspiciatis eligendi. Voluptatibus optio natus
-                asperiores est commodi amet quia architecto. Dolores
-                necessitatibus et.
-              </p>*/}
-            </div>
-            <div className="px-[20px] serviceBorder">
-              <h1 className="text-white text-[3.6rem] mb-[3.6rem] leading-[1.222] mt-o font-normal frank flex gap-5 items-center">
-                <Image
-                  alt="redux"
-                  src="/images/redux.svg"
-                  width={50}
-                  height={50}
-                />
-                Redux
-              </h1>
-            </div>
-            <div className="px-[20px] serviceBorder">
-              <h1 className="text-white text-[3.6rem] mb-[3.6rem] leading-[1.222] mt-o font-normal frank flex gap-5 items-center">
-                <Image
-                  alt="typescript"
-                  src="/images/typescript.svg"
-                  width={50}
-                  height={50}
-                />
-                Typescript
-              </h1>
-            </div>
-            <div className="px-[20px] serviceBorder">
-              <h1 className="text-white text-[3.6rem] mb-[3.6rem] leading-[1.222] mt-o font-normal frank flex gap-5 items-center">
-                <Image
-                  alt="responsive"
-                  src="/images/responsive.svg"
-                  width={50}
-                  height={50}
-                />
-                Responsive Design
-              </h1>
-            </div>
-          </div>
+                <path d="M6 12l-2 2 2 2" />
+              </svg>
+            }
+          ></ServiceHeading>
+          <ServicesContainer>
+            <Service serviceName="Cross-Platform Mobile Development" />
+            <Service serviceName="Responsive Web Dashboards & UI Components" />
+            <Service serviceName="Embeddable Third-Party Widgets" />
+            <Service serviceName="State Management & Real-Time Data Syncing" />
+          </ServicesContainer>
+          <ServiceHeading
+            heading="Technical Leadership"
+            icon={
+              <svg
+                xmlns="http://w3.org"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                fill="none"
+                stroke="#0891b2"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            }
+          ></ServiceHeading>
+          <ServicesContainer>
+            <Service serviceName="Technical Roadmapping & Strategy" />
+            <Service serviceName="Code-Review Standards & Mentorship" />
+            <Service serviceName="Multi-Tenant SaaS Development" />
+            <Service serviceName="Quarterly Planning (OKR/KPI Alignment)" />
+          </ServicesContainer>
         </div>
       </section>
 
@@ -500,81 +543,15 @@ export default function Home() {
             <br className="hidden md:block" />
             them out{" "}
           </p>
-          <div className="w-full rounded-[24px]  p-[10px] h-[600px] mb-[10rem] bg-white">
-            <div
-              onClick={() => window.open("https://localramp.co/")}
-              className={`w-full block rounded-[20px] h-full bg-black p-[30px] overflow-hidden gradient-box`}
-            >
-              <div className="text-white text-[24px] roboto flex justify-between items-center">
-                <span>Local Ramp</span>
-                <Link
-                  href="https://localramp.co/"
-                  passHref
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="vProject hover:underline decoration-[1px] underline-offset-[3px]"
-                >
-                  Veiw Project
-                </Link>
-                <span className="projectIcon">
-                  <svg
-                    width="40"
-                    height="40"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M14.025 17.9508L12.95 16.9008L17.15 12.7008H4V11.2008H17.15L12.925 6.97578L14 5.92578L20.025 11.9508L14.025 17.9508Z"
-                      fill="#Ffffff"
-                    />
-                  </svg>
-                </span>
-              </div>
-              <div className="text-[#f2f2f280]  tracking-[0.2px] self-stretch pr-8 font-sans font-light text-[14px] leading-[20px]">
-                <span className="text-[#f2f2f2cc] font-medium castoro">
-                  Localramp
-                </span>{" "}
-                <span>
-                  —&quot;Empowering emerging markets with efficient offramp and
-                  onramp payment solutions&quot;
-                </span>
-              </div>
-              <div className="text-[#f2f2f280] mb-10 tracking-[0.2px] self-stretch pr-8 font-sans font-light text-[18px] leading-[20px]">
-                <span className="text-white font-medium castoro">
-                  Made with
-                </span>{" "}
-                <span className="text-[#f2f2f2cc] font-medium castoro">
-                  :&quot;React, tailwind, REST api&apos;s&quot;
-                </span>
-              </div>
-              <div className="w-[90%] imageDiv aspect-[16/9] mx-auto relative">
-                <Image
-                  src="/images/Localramp.png"
-                  fill
-                  alt="localramp"
-                  className="object-cover rounded z-[-1]"
-                />
-                <div className="about text-white pt-0 md:pt-[10rem]">
-                  <h1 className="text-center text-[4rem] md:text-[5rem] castoro">
-                    Project Description
-                  </h1>
-                  <p className="text-center text-[2rem] lora">
-                    An innovative platform enabling seamless conversion between
-                    traditional
-                    <br className="hidden md:block" /> currencies and
-                    cryptocurrencies, offering secure
-                    <br className="hidden md:block" />
-                    and efficient transactions.
-                  </p>
-                  <h1 className="text-center text-[3rem] castoro">My Role</h1>
-                  <p className="text-center text-[2rem] lora font-semibold">
-                    Frontend Developer
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+          <ProjectCard
+            title="LocalRamp"
+            projectUrl="https://localramp.co/"
+            tagline="Offramp and Onramp Payments for Emerging Markets."
+            techStack="React, Node.js, PostgreSQL, Redis"
+            imageSrc="/images/Localramp.png"
+            description="A high-performance crypto infrastructure provider specializing in instant fiat-to-crypto onboarding and offboarding for emerging markets. The platform integrates local payment networks with top blockchain networks for secure, real-time stablecoin settlements."
+            role="Lead Software Developer"
+          />
         </div>
       </section>
 
