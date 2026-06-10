@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [review1, setReview1] = useState(true);
-  const [review2, setReview2] = useState(false);
+  // const [review2, setReview2] = useState(false);
   const [isFixed, setIsFixed] = useState(false);
   const [activeSection, setActiveSection] = useState("");
   const handleDownload = () => {
@@ -587,7 +587,7 @@ export default function Home() {
           <button
             onClick={() => {
               setReview1(true);
-              setReview2(false);
+              // setReview2(false);
             }}
             className={`block w-[10px] h-[10px] leading-[10px] rounded-full ${review1 ? "bg-purplink" : "bg-black/40"} border-none p-0 m-0 cursor-pointer text-transparent shadow-none text-0`}
           />
