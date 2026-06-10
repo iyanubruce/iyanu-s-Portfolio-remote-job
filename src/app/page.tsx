@@ -40,7 +40,7 @@ export default function Home() {
       },
       {
         threshold: 0.1, // 60% of the section must be visible to activate
-      }
+      },
     );
     sections.forEach((section) => observer.observe(section));
     window.addEventListener("scroll", handleScroll);
@@ -54,7 +54,8 @@ export default function Home() {
       {/*hero section*/}
       <section
         id="intro"
-        className="bg-bgAsh section1 relative isolate hero-section z-[100]">
+        className="bg-bgAsh section1 relative isolate hero-section z-[100]"
+      >
         <div className="absolute h-full w-full lg:w-1/2 right-0 z-[0]">
           <Image
             src="/images/intro-bg.png"
@@ -64,45 +65,54 @@ export default function Home() {
           />
         </div>
         <div
-          className={`${isFixed ? "fixed" : "absolute"} lg:hidden flex-col py-24 gap-10 pl-10 pubSans ${menuOpen ? "flex" : "hidden"} top-[72px] left-0 right-0 bg-bgblack text-3xl z-50`}>
+          className={`${isFixed ? "fixed" : "absolute"} lg:hidden flex-col py-24 gap-10 pl-10 pubSans ${menuOpen ? "flex" : "hidden"} top-[72px] left-0 right-0 bg-bgblack text-3xl z-50`}
+        >
           <a
             href="#intro"
-            className={`${activeSection === "intro" ? "text-white" : "text-greishh"} block transition-colors duration-200`}>
+            className={`${activeSection === "intro" ? "text-white" : "text-greishh"} block transition-colors duration-200`}
+          >
             Intro
           </a>
           <a
             href="#about"
-            className={`${activeSection === "about" ? "text-white" : "text-greishh"} block transition-colors duration-200`}>
+            className={`${activeSection === "about" ? "text-white" : "text-greishh"} block transition-colors duration-200`}
+          >
             About
           </a>
           <a
             href="#skills"
-            className={`${activeSection === "skills" ? "text-white" : "text-greishh"} block transition-colors duration-200`}>
+            className={`${activeSection === "skills" ? "text-white" : "text-greishh"} block transition-colors duration-200`}
+          >
             Skills
           </a>
           <a
             href="#works"
-            className={`${activeSection === "works" ? "text-white" : "text-greishh"} block transition-colors duration-200`}>
+            className={`${activeSection === "works" ? "text-white" : "text-greishh"} block transition-colors duration-200`}
+          >
             Works
           </a>
           <a
             href="#reveiws"
-            className={`${activeSection === "reveiws" ? "text-white" : "text-greishh"} block transition-colors duration-200`}>
+            className={`${activeSection === "reveiws" ? "text-white" : "text-greishh"} block transition-colors duration-200`}
+          >
             Reveiws
           </a>
           <a
             href="#contact"
-            className={`${activeSection === "contact" ? "text-white" : "text-greishh"} block transition-colors duration-200`}>
+            className={`${activeSection === "contact" ? "text-white" : "text-greishh"} block transition-colors duration-200`}
+          >
             Contact
           </a>
         </div>
         <div
-          className={`flex z-[9999999] ${isFixed ? "fixed w-[100%] translate-y-0 opacity-100" : "absolute lg:mt-10 w-[92%] "} transition-all duration-500 ease-in-out top-0 left-0 right-0 mt-0 items-center justify-between mx-auto bg-bgblack h-[72px] px-[2.6rem] rowl text-white`}>
+          className={`flex z-[9999999] ${isFixed ? "fixed w-[100%] translate-y-0 opacity-100" : "absolute lg:mt-10 w-[92%] "} transition-all duration-500 ease-in-out top-0 left-0 right-0 mt-0 items-center justify-between mx-auto bg-bgblack h-[72px] px-[2.6rem] rowl text-white`}
+        >
           <span className="text-4xl castoro">Taiwo.</span>{" "}
           <button
             aria-label="Toggle Menu"
             onClick={() => setMenuOpen(!menuOpen)}
-            className="flex flex-col  h-full w-16 lg:hidden justify-between py-9">
+            className="flex flex-col  h-full w-16 lg:hidden justify-between py-9"
+          >
             <div className="w-full h-[1px] bg-white"></div>
             <div className="w-full h-[1px] bg-white"></div>
             <div className="w-full h-[1px] bg-white"></div>
@@ -111,42 +121,48 @@ export default function Home() {
             <li className="">
               <a
                 className={`block pubSans font-normal text-[1.5rem] leading-[3.2rem] ${activeSection === "intro" ? "text-white" : "text-greishh"} transition-colors duration-200 px-[1.2rem] hover:text-white`}
-                href="#intro">
+                href="#intro"
+              >
                 Intro
               </a>
             </li>
             <li className="">
               <a
                 className={`block pubSans font-normal text-[1.5rem] leading-[3.2rem] ${activeSection === "about" ? "text-white" : "text-greishh"} transition-colors duration-200 px-[1.2rem] hover:text-white`}
-                href="#about">
+                href="#about"
+              >
                 About
               </a>
             </li>
             <li className="">
               <a
                 className={`block pubSans font-normal text-[1.5rem] leading-[3.2rem] ${activeSection === "skills" ? "text-white" : "text-greishh"} transition-colors duration-200 px-[1.2rem] hover:text-white`}
-                href="#skills">
+                href="#skills"
+              >
                 Skills
               </a>
             </li>
             <li className="">
               <a
                 className={`block pubSans font-normal text-[1.5rem] leading-[3.2rem] ${activeSection === "works" ? "text-white" : "text-greishh"} transition-colors duration-200 px-[1.2rem] hover:text-white`}
-                href="#works">
+                href="#works"
+              >
                 Works
               </a>
             </li>
             <li className="">
               <a
                 className={`block pubSans font-normal text-[1.5rem] leading-[3.2rem] ${activeSection === "reveiws" ? "text-white" : "text-greishh"} transition-colors duration-200 px-[1.2rem] hover:text-white`}
-                href="#reveiws">
+                href="#reveiws"
+              >
                 Reveiws
               </a>
             </li>
             <li className="">
               <a
                 className={`block pubSans font-normal text-[1.5rem] leading-[3.2rem] ${activeSection === "contact" ? "text-white" : "text-greishh"} transition-colors duration-200 px-[1.2rem] hover:text-white`}
-                href="#contact">
+                href="#contact"
+              >
                 Contact
               </a>
             </li>
@@ -165,12 +181,14 @@ export default function Home() {
             <div className="btnDiv w-full items-center lg:w-max flex flex-col lg:flex-row lg:gap-5">
               <a
                 href="#about"
-                className="Hbtn block pubSans lg:hover:text-bTextb text-bgblack lg:text-white bg-white lg:bg-bTextb lg:hover:bg-transparent border-[2px] lg:hover:border-bTextb">
+                className="Hbtn block pubSans lg:hover:text-bTextb text-bgblack lg:text-white bg-white lg:bg-bTextb lg:hover:bg-transparent border-[2px] lg:hover:border-bTextb"
+              >
                 More about me
               </a>
               <a
                 href="#contact"
-                className="Hbtn pubSans text-white lg:hover:bg-bTextb lg:hover:text-white lg:text-bTextb border-2 border-white lg:border-bTextb">
+                className="Hbtn pubSans text-white lg:hover:bg-bTextb lg:hover:text-white lg:text-bTextb border-2 border-white lg:border-bTextb"
+              >
                 Get In touch
               </a>
             </div>
@@ -179,7 +197,8 @@ export default function Home() {
             <div className="bg-white w-[16rem] h-[2px] transform translate-y-[-0.9rem] "></div>
             <button
               onClick={handleDownload}
-              className="Hbtn pubSans hover:text-bTextb hover:bg-white text-white border-2 border-white ">
+              className="Hbtn pubSans hover:text-bTextb hover:bg-white text-white border-2 border-white "
+            >
               Get My cv
             </button>
           </div>
@@ -191,7 +210,8 @@ export default function Home() {
               className="md:flex hidden w-10 h-10 relative"
               passHref
               target="_blank"
-              rel="noopener noreferrer">
+              rel="noopener noreferrer"
+            >
               <Image
                 src="/images/linkedin.jpg"
                 fill
@@ -202,7 +222,8 @@ export default function Home() {
             <div className="hidden md:block h-32 w-[1px] bg-white my-10"></div>
             <a
               href="#about"
-              className="grid animate-bounce place-content-center p-[2.1rem] border-2 border-white rounded-[50%] ">
+              className="grid animate-bounce place-content-center p-[2.1rem] border-2 border-white rounded-[50%] "
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="10"
@@ -213,7 +234,8 @@ export default function Home() {
                   transform: "",
                   msFilter: "",
                 }}
-                className="">
+                className=""
+              >
                 <path d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"></path>
               </svg>
             </a>
@@ -233,13 +255,14 @@ export default function Home() {
       {/*about section*/}
       <section
         id="about"
-        className="bg-white flex justify-center py-[22.4rem] px-[3rem] md:px-[10rem]">
+        className="bg-white flex justify-center py-[22.4rem] px-[3rem] md:px-[10rem]"
+      >
         <div className="w-full max-w-[1280px] ">
           <div className="uppercase text-4xl font-semibold tracking-wider roboto z-[0]  relative w-max">
             About me{" "}
             <div className="bg-purplink h-[2px] absolute top-[-30px] left-0 right-[-30px]"></div>
           </div>
-          <div className="mt-[5rem] lora text-[24px] leading-[4rem]">
+          <div className="mt-[5rem] lora text-[16px] md:text-[24px] leading-[3rem] md:leading-[4rem] text-justify">
             {" "}
             <p>
               {" "}
@@ -269,7 +292,8 @@ export default function Home() {
           <div className="">
             <button
               onClick={handleDownload}
-              className="uppercase w-full md:w-[45rem] h-[6rem] mt-[5rem] text-[1.4rem] font-[700] tracking-widest roboto border-2 border-bgblack bg-[#130209] text-white">
+              className="uppercase w-full md:w-[45rem] h-[6rem] mt-[5rem] text-[1.4rem] font-[700] tracking-widest roboto border-2 border-bgblack bg-[#130209] text-white"
+            >
               download my cv
             </button>
           </div>
@@ -288,7 +312,7 @@ export default function Home() {
               <div className="text-[2.1rem] font-[400] leading-[1.333] mt-0 roboto font-ligatures text-rendering-optimize">
                 Frontend Developer
               </div>
-              <p className="font-normal not-italic leading-[1.882] block my-4 mx-0  text-[1.7rem] roboto">
+              <p className="font-normal not-italic leading-[1.882] block my-4 mx-0 text-[16px] text-justify md:text-left  md:text-[1.7rem] roboto">
                 At Local Ramp, I worked as a front-end developer, building
                 responsive and user-friendly interfaces for a platform that
                 provides an API to convert local currencies to digital
@@ -302,25 +326,6 @@ export default function Home() {
             </div>
             <div className="p-10">
               <p className="uppercase roboto text-[1.4rem] tracking-[0.3rem] font-[400] leading-[1.714] text-black mb-[0.8rem]">
-                August 2024 – October 2024
-              </p>
-              <div className="frank text-[3.6rem] font-[500] leading-[1.22]">
-                Ojuju Web
-              </div>
-              <div className="text-[2.1rem] font-[400] leading-[1.333] mt-0 roboto font-ligatures text-rendering-optimize">
-                Frontend Developer
-              </div>
-              <p className="font-normal not-italic leading-[1.882] block my-4 mx-0 text-[1.7rem] roboto">
-                I developed a landing page for Ojuju Web, an AI-powered platform
-                that connects tailors with customers. The page showcases how
-                users can easily get their measurements and receive custom-made
-                tailored fits. My goal was to create a responsive, user-friendly
-                design that highlights the platform’s simplicity and innovative
-                approach to tailored clothing.
-              </p>
-            </div>
-            <div className="p-10">
-              <p className="uppercase roboto text-[1.4rem] tracking-[0.3rem] font-[400] leading-[1.714] text-black mb-[0.8rem]">
                 September 2024 – Present
               </p>
               <div className="frank text-[3.6rem] font-[500] leading-[1.22]">
@@ -329,7 +334,7 @@ export default function Home() {
               <div className="text-[2.1rem] font-[400] leading-[1.333] mt-0 roboto font-ligatures text-rendering-optimize">
                 Backend Developer
               </div>
-              <p className="font-normal not-italic leading-[1.882] block my-4 mx-0 text-[1.7rem] roboto">
+              <p className="font-normal not-italic leading-[1.882] block my-4 mx-0 text-[16px] text-justify md:text-left  md:text-[1.7rem] roboto">
                 As a Back-End Engineer at Taja, I designed and maintained
                 RESTful APIs to power client applications, streamlining data
                 flow and integration with front-end services. By optimizing
@@ -350,7 +355,8 @@ export default function Home() {
       {/*services section*/}
       <section
         id="skills"
-        className="flex justify-center py-[19.4rem] px-[3rem] md:px-[10rem] relative darkbg imagebg isolate">
+        className="flex justify-center py-[19.4rem] px-[3rem] md:px-[10rem] relative darkbg imagebg isolate"
+      >
         <div className="shadowOverlay"></div>
         <div className="w-full max-w-[1280px] z-10">
           <h1 className="font-semibold text-[1.7rem] leading-[1.176] uppercase tracking-[.5rem] mt-0 pt-[3.2rem] mb-[8rem] relative text-center roboto text-white">
@@ -488,16 +494,17 @@ export default function Home() {
             SElected works{" "}
             <div className="absolute bottom-0 left-1/2 transform-flat transform bg-purplink translate-x-[-50%] w-[150px] h-[2px] z-0"></div>
           </h1>
-          <p className="text-center text-[4rem] md:text-[5.4rem] font-[400] leading-[1.259] tracking-[-0.05rem] text-black frank mb-[15rem]">
+          <p className="text-center text-[2.5rem] md:text-[5.4rem] font-[400] leading-[1.259] tracking-[-0.05rem] text-black frank mb-[7rem] md:mb-[15rem]">
             Here are some projects I have worked
-            <br /> on lately. Feel free to check
-            <br />
+            <br className="hidden md:block" /> on lately. Feel free to check
+            <br className="hidden md:block" />
             them out{" "}
           </p>
           <div className="w-full rounded-[24px]  p-[10px] h-[600px] mb-[10rem] bg-white">
             <div
               onClick={() => window.open("https://localramp.co/")}
-              className={`w-full block rounded-[20px] h-full bg-black p-[30px] overflow-hidden gradient-box`}>
+              className={`w-full block rounded-[20px] h-full bg-black p-[30px] overflow-hidden gradient-box`}
+            >
               <div className="text-white text-[24px] roboto flex justify-between items-center">
                 <span>Local Ramp</span>
                 <Link
@@ -505,7 +512,8 @@ export default function Home() {
                   passHref
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="vProject hover:underline decoration-[1px] underline-offset-[3px]">
+                  className="vProject hover:underline decoration-[1px] underline-offset-[3px]"
+                >
                   Veiw Project
                 </Link>
                 <span className="projectIcon">
@@ -514,7 +522,8 @@ export default function Home() {
                     height="40"
                     viewBox="0 0 24 24"
                     fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
                     <path
                       d="M14.025 17.9508L12.95 16.9008L17.15 12.7008H4V11.2008H17.15L12.925 6.97578L14 5.92578L20.025 11.9508L14.025 17.9508Z"
                       fill="#Ffffff"
@@ -566,158 +575,14 @@ export default function Home() {
               </div>
             </div>
           </div>
-
-          <div className="w-full rounded-[24px] mb-[10rem]  p-[10px] h-[600px] bg-white">
-            <div
-              onClick={() => window.open("https://www.ojuju.ng", "_blank")}
-              className={`w-full block rounded-[20px] h-full bg-black p-[30px] overflow-hidden gradient-box`}>
-              <div className="text-white text-[24px] frank flex justify-between items-center">
-                <span>Ojuju web</span>
-                <Link
-                  href="https://www.ojuju.ng/"
-                  passHref
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="vProject hover:underline decoration-[1px] underline-offset-[3px]">
-                  Veiw Project
-                </Link>
-                <span className="projectIcon">
-                  <svg
-                    width="40"
-                    height="40"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M14.025 17.9508L12.95 16.9008L17.15 12.7008H4V11.2008H17.15L12.925 6.97578L14 5.92578L20.025 11.9508L14.025 17.9508Z"
-                      fill="#Ffffff"
-                    />
-                  </svg>
-                </span>
-              </div>
-              <div className="text-[#f2f2f280] tracking-[0.2px] self-stretch pr-8 font-sans font-light text-[14px] leading-[20px]">
-                <span className="text-[#f2f2f2cc] font-medium castoro">
-                  Ojuju web
-                </span>{" "}
-                <span>
-                  —&quot;Elevate Your Style with Designer Elegance.&quot;
-                </span>
-              </div>
-              <div className="mb-10 tracking-[0.2px] self-stretch pr-8 font-sans font-light text-[18px] leading-[20px]">
-                <span className="text-white font-medium castoro">
-                  Made with
-                </span>{" "}
-                <span className="text-[#f2f2f2cc] font-medium castoro">
-                  :&quot;React, Nextjs, tailwind, REST api&apos;s&quot;
-                </span>
-              </div>
-              <div className="w-[90%] imageDiv aspect-[16/9] mx-auto relative">
-                <Image
-                  src="/images/Ojuju.png"
-                  fill
-                  alt="localramp"
-                  className="object-cover rounded"
-                />
-                <div className="about text-white pt-0 md:pt-[10rem]">
-                  <h1 className="text-center text-[4rem] md:text-[5rem] castoro">
-                    Project Description
-                  </h1>
-                  <p className="text-center text-[2rem] lora">
-                    A luxury fashion platform showcasing exclusive collections
-                    from renowned
-                    <br className="hidden md:block" /> designers, offering a
-                    curated selection of high-end clothing{" "}
-                    <br className="hidden md:block" />
-                    for the discerning shopper
-                  </p>
-                  <h1 className="text-center text-[3rem] castoro">My Role</h1>
-                  <p className="text-center text-[2rem] lora font-semibold">
-                    Frontend Developer
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="w-full rounded-[24px]  p-[10px] h-[600px] bg-white">
-            <div
-              onClick={() =>
-                window.open(
-                  "https://online-learning-platform-8efe-r0p4nre5z-iyanubruces-projects.vercel.app/",
-                  "_blank"
-                )
-              }
-              className={`w-full block rounded-[20px] h-full bg-black p-[30px] overflow-hidden gradient-box`}>
-              <div className="text-white text-[24px] frank flex justify-between items-center">
-                <span>Stellar Study</span>
-                <Link
-                  href="https://www.ojuju.ng/"
-                  passHref
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="vProject hover:underline decoration-[1px] underline-offset-[3px]">
-                  Veiw Project
-                </Link>
-                <span className="projectIcon">
-                  <svg
-                    width="40"
-                    height="40"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M14.025 17.9508L12.95 16.9008L17.15 12.7008H4V11.2008H17.15L12.925 6.97578L14 5.92578L20.025 11.9508L14.025 17.9508Z"
-                      fill="#Ffffff"
-                    />
-                  </svg>
-                </span>
-              </div>
-              <div className="text-[#f2f2f280] tracking-[0.2px] self-stretch pr-8 font-sans font-light text-[14px] leading-[20px]">
-                <span className="text-[#f2f2f2cc] font-medium castoro">
-                  Stellar Study
-                </span>{" "}
-                <span>—&quot;The future of online learning.&quot;</span>
-              </div>
-              <div className="mb-10 tracking-[0.2px] self-stretch pr-8 font-sans font-light text-[18px] leading-[20px]">
-                <span className="text-white font-medium castoro">
-                  Made with
-                </span>{" "}
-                <span className="text-[#f2f2f2cc] font-medium castoro">
-                  :&quot;React, Nextjs, tailwind&quot;
-                </span>
-              </div>
-              <div className="w-[90%] imageDiv aspect-[16/9] mx-auto relative">
-                <Image
-                  src="/images/StelarStudy.png"
-                  fill
-                  alt="localramp"
-                  className="object-cover rounded"
-                />
-                <div className="about text-white pt-0 md:pt-[10rem]">
-                  <h1 className="text-center text-[4rem] md:text-[5rem] castoro">
-                    Project Description
-                  </h1>
-                  <p className="text-center text-[2rem] lora">
-                    An online learning platform where instructors can create and
-                    <br className="hidden md:block" />
-                    sell courses, offering students easy access to high-quality
-                    <br className="hidden md:block" />
-                    learning resources across various subjects
-                  </p>
-                  <h1 className="text-center text-[3rem] castoro">My Role</h1>
-                  <p className="text-center text-[2rem] lora font-semibold">
-                    Frontend Developer
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
       {/*reveiws section*/}
       <section
         id="reveiws"
-        className="flex justify-center pt-[13.6rem] pb-[13.5rem] md:pt-[18.44rem] md:pb-[16rem] bg-prbg px-[3rem] relative">
+        className="flex justify-center pt-[13.6rem] pb-[13.5rem] md:pt-[18.44rem] md:pb-[16rem] bg-prbg px-[3rem] relative"
+      >
         <div className="absolute flex gap-[20px] bottom-[10rem] md:bottom-[13.5rem] translate-x-[50%] md:translate-x-0 right-[50%] md:right-[13rem]">
           <button
             onClick={() => {
@@ -726,45 +591,19 @@ export default function Home() {
             }}
             className={`block w-[10px] h-[10px] leading-[10px] rounded-full ${review1 ? "bg-purplink" : "bg-black/40"} border-none p-0 m-0 cursor-pointer text-transparent shadow-none text-0`}
           />
-          <button
+          {/* <button
             onClick={() => {
               setReview1(false);
               setReview2(true);
             }}
             className={`block w-[10px] h-[10px] leading-[10px] rounded-full ${review2 ? "bg-purplink" : "bg-black/40"} border-none p-0 m-0 cursor-pointer text-transparent shadow-none text-0`}
-          />
+          /> */}
         </div>
+
         <div
-          className={`w-[89%] max-w-[1280px] ${review2 ? "commentOpen" : "commentClosed"}`}>
-          <p className="text-[2.6rem] md:text-[3rem] lg:text-[3.2rem] xl:text-[3.8rem]  font-normal leading-[1.8] roboto text-black">
-            Iyanuoluwa did an outstanding job developing the landing page for
-            Ojuju Web. his work effectively showcased the UI design for our
-            platform. Iyanuoluwa delivered a responsive and user-friendly design
-            that emphasizes the platform’s simplicity and innovation.
-          </p>
-          <div className="flex items-center gap-6 mt-[8rem] ">
-            <div className="w-[7.2rem] h-[7.2rem] relative">
-              {" "}
-              <Image
-                src="/images/user-04.jpeg"
-                fill
-                alt="comment"
-                className="rounded-[50%] object-cover"
-              />
-            </div>
-            <div>
-              <h1 className="text-[2.4rem] leading-[1.5] roboto font-[700]">
-                John Paul
-              </h1>
-              <h6 className="text-[1.8rem] leading-[1.333] text-black/70 roboto font-normal">
-                CEO, Ojuju Web
-              </h6>
-            </div>
-          </div>
-        </div>
-        <div
-          className={`w-[89%] max-w-[1280px] ${review1 ? "commentOpen" : "commentClosed"}`}>
-          <p className="text-[2.6rem] md:text-[3rem] lg:text-[3.2rem] xl:text-[3.8rem]  font-normal leading-[1.8] roboto text-black">
+          className={`w-[89%] max-w-[1280px] ${review1 ? "commentOpen" : "commentClosed"}`}
+        >
+          <p className="text-[2rem] text-justify md:text-left md:text-[3rem] lg:text-[3.2rem] xl:text-[3.8rem]  font-normal leading-[1.8] roboto text-black">
             At Local Ramp, Iyanuoluwa was a skilled front-end developer,
             creating responsive and user-friendly interfaces for our currency
             conversion platform. They effectively integrated real-time data and
@@ -797,7 +636,8 @@ export default function Home() {
       {/*contact section*/}
       <section
         id="contact"
-        className="pt-[18.4rem] pb-[6.4rem] bg-sBblack flex justify-center">
+        className="pt-[18.4rem] pb-[6.4rem] bg-sBblack flex justify-center"
+      >
         <div className="w-[89%] max-w-[1280px] ">
           <h1 className="uppercase tracking-[0.5rem] pt-0 pb-[3.2rem] md:pb-0 text-center md:text-left md:pt-[3.2rem] text-white relative leading-[1.176] text-[1.6rem] md:text-[1.7rem] font-[600] roboto mb-[6.8rem] sm:mb-[8rem]">
             GEt in tOuCh{" "}
@@ -805,7 +645,8 @@ export default function Home() {
           </h1>
           <Link
             href="mailto:iyanuoluwa938@gmail.com"
-            className="border-b block text-purplink w-max hover:border-white transition-colors duration-500 border-white/10 roboto text-[6vw] lg:text-[8.1rem] mb-[10rem] font-normal">
+            className="border-b block text-purplink w-max hover:border-white transition-colors duration-500 border-white/10 roboto text-[6vw] lg:text-[8.1rem] mb-[10rem] font-normal"
+          >
             iyanuoluwa938@gmail.com
           </Link>
           <p className="text-[4rem] sm:text-[5.4rem] font-normal leading-[1.259] tracking-[-0.05rem] text-white frank">
@@ -814,7 +655,8 @@ export default function Home() {
             greater product. <br className="block sm:hidden" />
             <Link
               href="mailto:iyanuoluwa938@gmail.com"
-              className="text-purplink border-b hover:border-white transition-colors duration-500 border-white/10 ">
+              className="text-purplink border-b hover:border-white transition-colors duration-500 border-white/10 "
+            >
               Email Me
             </Link>
             .
@@ -826,9 +668,9 @@ export default function Home() {
                 Social
               </div>
               <Link
-                href="#"
-                // href="https://www.linkedin.com/in/iyanuoluwa-taiwo-25537632b/"
-                className="text-[4.2rem] hover:text-purplink duration-500 transition-colors font-normal frank leading-[1.259] text-white">
+                href="https://www.linkedin.com/in/iyanuoluwa-taiwo-540823333/"
+                className="text-[4.2rem] hover:text-purplink duration-500 transition-colors font-normal frank leading-[1.259] text-white"
+              >
                 Linkedin
               </Link>
             </div>
@@ -853,7 +695,8 @@ export default function Home() {
           </div>
           <a
             href="#intro"
-            className="block ml-auto hover:bg-purplink transition-colors duration-300 bg-white/5 no-underline m-0 p-0 border-0 h-[60px] w-[60px] leading-[60px] text-center text-white uppercase bg-no-repeat bg-center bg-[url('/images/icon-arrow-up.svg')] relative">
+            className="block ml-auto hover:bg-purplink transition-colors duration-300 bg-white/5 no-underline m-0 p-0 border-0 h-[60px] w-[60px] leading-[60px] text-center text-white uppercase bg-no-repeat bg-center bg-[url('/images/icon-arrow-up.svg')] relative"
+          >
             <div className="block w-[1px] h-[100px] bg-white/5 absolute top-[-115px] left-1/2"></div>
             <div className="block float-left w-[120px] text-[1.2rem] leading-[30px] uppercase tracking-[.2rem] text-white/15 transition-all duration-500 origin-[left_bottom] rotate-[-90deg] absolute left-[calc(30px+15px)] top-[-165px] roboto">
               {" "}
