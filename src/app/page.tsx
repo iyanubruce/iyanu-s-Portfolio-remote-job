@@ -6,6 +6,7 @@ import Service from "@/components/service";
 import ServiceHeading from "@/components/service-heading";
 import ServicesContainer from "@/components/services-container";
 import ProjectCard from "@/components/project";
+import WorkHistory from "@/components/work-history";
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [review1, setReview1] = useState(true);
@@ -305,61 +306,7 @@ export default function Home() {
             Work{" "}
             <div className="bg-purplink h-[2px] absolute top-[-30px] left-0 right-[-30px]"></div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 ">
-            <div className="p-10">
-              <p className="uppercase roboto text-[1.4rem] tracking-[0.3rem] font-[400] leading-[1.714] text-black mb-[0.8rem]">
-                January 2023 – September 2024
-              </p>
-              <div className="frank text-[3.6rem] font-[500] leading-[1.22]">
-                Localramp
-              </div>
-              <div className="text-[2.1rem] font-[400] leading-[1.333] mt-0 lora font-ligatures text-rendering-optimize">
-                SoftWare Engineer
-              </div>
-              <p className="font-normal not-italic leading-[1.882] block my-4 mx-0 text-[16px] text-justify md:text-left  md:text-[1.7rem] roboto">
-                When I joined LocalRamp as Lead Developer, I wore two main hats.
-                I stepped in to lead our backend engineering team, while
-                simultaneously operating as a full-stack engineer to bridge our
-                entire product together. On the backend, I led the team in
-                architecting a high-security fiat-to-crypto gateway, ensuring
-                our infrastructure could safely handle automated payout logic
-                and high-concurrency transaction volumes.On the frontend, I took
-                complete ownership of building our core infrastructure, user
-                dashboards, and embeddable widgets from scratch. My goal was to
-                take those complex blockchain data layers and turn them into
-                clean, lightning-fast, responsive interfaces. By leading the
-                backend strategy and executing the frontend delivery, I was able
-                to ensure our real-time payment APIs and user-facing dashboards
-                worked together perfectly without missing a beat.
-              </p>
-            </div>
-            <div className="p-10">
-              <p className="uppercase roboto text-[1.4rem] tracking-[0.3rem] font-[400] leading-[1.714] text-black mb-[0.8rem]">
-                September 2024 – Present
-              </p>
-              <div className="frank text-[3.6rem] font-[500] leading-[1.22]">
-                Taja
-              </div>
-              <div className="text-[2.1rem] font-[400] lora leading-[1.333] mt-0  font-ligatures text-rendering-optimize">
-                Software Engineer
-              </div>
-              <p className="font-normal not-italic leading-[1.882] block my-4 mx-0 text-[16px] text-justify md:text-left  md:text-[1.7rem] roboto">
-                At Taja, I joined as a Backend Engineer focused on making sure
-                our client apps ran smoothly and securely. My day-to-day was
-                centered around designing and maintaining the core RESTful APIs
-                that fed data to our frontend. One of my favorite wins there was
-                diving deep into our database queries and server-side logic to
-                optimize performance, which ended up shaving 10% off our overall
-                load times and giving our processing efficiency a massive boost.
-                I also took full responsibility for our security, setting up
-                best practices to protect sensitive user data across our
-                environments. I worked hand-in-hand with our frontend developers
-                and UI/UX designers, acting as the bridge that brought complex
-                backend mechanics into clean, snappy, and cohesive user-facing
-                features.
-              </p>
-            </div>
-          </div>
+          <WorkHistory />
         </div>
       </section>
 
