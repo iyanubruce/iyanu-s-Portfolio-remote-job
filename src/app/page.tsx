@@ -513,7 +513,7 @@ export default function Home() {
           <ProjectCard
             title="Access Fulcrum"
             githubUrl="https://github.com/iyanubruce/Quality-Assurance-Company-Site"
-            projectUrl="www.access-fulcrum.com"
+            projectUrl="https://access-fulcrum.com"
             tagline="Corporate Website for a Commodities Inspection Firm - Access Fulcrum"
             techStack="React, Nextjs, Typescript"
             imageSrc="/images/Access-fulcrum.png"
