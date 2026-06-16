@@ -497,7 +497,28 @@ export default function Home() {
             techStack="React, Node.js, PostgreSQL, Redis"
             imageSrc="/images/Localramp.png"
             description="A high-performance crypto infrastructure provider specializing in instant fiat-to-crypto onboarding and offboarding for emerging markets. The platform integrates local payment networks with top blockchain networks for secure, real-time stablecoin settlements."
-            role="Lead Software Developer"
+            role="Lead Software Engineer"
+          />
+
+          <ProjectCard
+            title="Rate Limitr"
+            githubUrl="https://github.com/iyanubruce/RateLimiter-Frontend"
+            projectUrl="https://rate-limiter-frontend-beta.vercel.app/"
+            tagline="Rate Limiting Infrastructure for API Companies"
+            techStack="React, Node.js, PostgreSQL, Redis"
+            imageSrc="/images/Rate-Limiter.png"
+            description="RateLimitr is a multi-tenant rate limiting platform that gives API-first companies precise control over how their APIs are consumed. Four strategies — fixed window, token bucket, leaky bucket, and sliding window — run as atomic Lua scripts in Redis for sub-millisecond decisions. Real-time analytics on TimescaleDB, live WebSocket metrics, and Stripe-powered plan gating. Built for SaaS teams that need to throttle, monitor, and monetize API usage at scale without building infrastructure from scratch."
+            role="Lead Software Engineer"
+          />
+          <ProjectCard
+            title="Access Fulcrum"
+            githubUrl="https://github.com/iyanubruce/Quality-Assurance-Company-Site"
+            projectUrl="www.access-fulcrum.com"
+            tagline="Corporate Website for a Commodities Inspection Firm - Access Fulcrum"
+            techStack="React, Nextjs, Typescript"
+            imageSrc="/images/Access-fulcrum.png"
+            description="A production-grade corporate website for Access Fulcrum Limited (AFL), a Nigerian commodities inspection company. Built to establish a professional digital presence with rich animations, print-ready company profiles, and a contact system."
+            role="Lead Software Engineer"
           />
         </div>
       </section>
