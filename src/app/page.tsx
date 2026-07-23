@@ -15,8 +15,8 @@ export default function Home() {
   const [activeSection, setActiveSection] = useState("");
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/Resume/IYANUOLUWA_TAIWO_Resume.docx.pdf";
-    link.download = "/IYANUOLUWA_TAIWO_Resume.docx.pdf";
+    link.href = "/Resume/IYANUOLUWA_TAIWO_Resume.pdf";
+    link.download = "/IYANUOLUWA_TAIWO_Resume.pdf";
     link.click();
   };
   useEffect(() => {
